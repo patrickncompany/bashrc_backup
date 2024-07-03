@@ -1,0 +1,30 @@
+alias gcod='git checkout develop'
+# cmpro
+alias cdcmpro='cd $HOME/Sites/cmpro/src'
+# cmpro-coldbox
+alias cdcoldbox='cd $HOME/Sites/cmpro-coldbox'
+alias cdbox='cd $HOME/Sites/cmpro-coldbox'
+# cmpro-devtools
+alias cddevtools='cd $HOME/Sites/devtools'
+alias cddt='cd $HOME/Sites/devtools'
+# cmpro-extjs
+alias cdextjs='cd $HOME/Sites/cmpro-extjs/src'
+alias cdx='cd $HOME/Sites/cmpro-extjs/src'
+# -z x = true if length of x is zero
+# -n x = true if length of n is not zero
+# git checkout [develop|feature/x]
+function gco() {
+    if [ -z "$1" ]; then
+        git checkout develop;
+    else
+        git checkout feature/$1;
+    fi;
+};
+# git flow feature start x
+function gffs() {
+    if [ -z "$1" ]; then
+        echo "need AI number";
+    else
+        git flow feature start $1;
+    fi;
+};
